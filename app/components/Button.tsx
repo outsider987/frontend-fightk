@@ -1,5 +1,7 @@
+'use client';
 import { useMemo } from "react";
 import clsx from "clsx";
+
 
 type ButtonProps = {
   mode?:
@@ -40,8 +42,12 @@ const Button = ({ children, ...props }: ButtonProps) => {
 
   return (
     <button
-      className={clsx("font-semibold rounded-md py-2 px-4", buttonStyle)}
       {...props}
+      className={clsx(
+        "font-semibold rounded-md py-2 px-4",
+        buttonStyle,
+        props.className
+      )}
     >
       {children}
     </button>

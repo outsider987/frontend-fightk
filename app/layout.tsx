@@ -24,7 +24,7 @@ export default function RootLayout({
       <html lang="en">
         <RootContextProvider>
           <body className={clsx(inter.className, " ")}>
-            {<Hedaer />}
+            {/* {<Hedaer />} */}
             <div className="flex w-full">{children}</div>
           </body>
         </RootContextProvider>
