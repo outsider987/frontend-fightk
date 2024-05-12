@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Hedaer from "./layouts/Header";
-import RootContextProvider from "./store";
-
+import "../globals.css";
+import RootContextProvider from "../store";
 import clsx from "clsx";
-import SessionWrapper from "./provider/SessionWrapper";
+import SessionWrapper from "../provider/SessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 

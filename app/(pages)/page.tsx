@@ -9,10 +9,10 @@ export default function Home() {
 
   if (session) {
     return (
-      <>
+      <div className='text-black'>
         Signed in as {session.user.email} <br />
         <button className='text-black' onClick={() => signOut()}>Sign out</button>
-      </>
+      </div>
     )
   }
 

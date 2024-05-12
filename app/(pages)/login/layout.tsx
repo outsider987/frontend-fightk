@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import clsx from "clsx";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "test",
@@ -15,10 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={clsx("h-screen w-screen", " ")}>
-        <div className="flex w-full h-full bg-blue">{children}</div>
-      </body>
-    </html>
+    <div className="h-screen w-screen">
+      <main className="flex w-full h-full bg-blue">{children}</main>
+    </div>
   );
 }

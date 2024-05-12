@@ -1,7 +1,7 @@
 "use client"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Button from "@/app/components/Button";
-const LoginPafge = () => {
+const LoginPage = () => {
   return (
     <div className="flex w-full">
       <div className="m-auto font-bold flex flex-[7] text-center items-center justify-center text-4xl">
@@ -17,4 +17,4 @@ const LoginPafge = () => {
   );
 };
 
-export default LoginPafge;
+export default LoginPage;
