@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const LoginPage = () => {
   const router = useRouter();
   const onGoogleLogin = () => {
-    router.push("http://localhost:3000/auth/google");
+    router.push(`${process.env.NEXTAUTH_URL}/auth/google`);
   };
   return (
     <div className="flex w-full">
