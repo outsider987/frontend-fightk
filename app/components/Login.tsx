@@ -2,8 +2,15 @@
 import React from 'react';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Button from "./Button";
+import { useRouter } from 'next/router';
 
 const LoginComponent = () => {
+
+  const router  = useRouter()
+  const   onGoogleLogin = () => {
+    
+    router.push('http://localhost:3000/auth/google')
+  }
   return (
     <div className="bg-blue">
       <div className="m-auto flex"> K Moment</div>
@@ -12,7 +19,7 @@ const LoginComponent = () => {
           <AccountCircleIcon />
         </div>
 
-        <Button>Login</Button>
+        <Button onClick={onGoogleLogin}>Login</Button>
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
-"use client"
+"use client";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Button from "@/app/components/Button";
+import { useRouter } from "next/navigation";
 const LoginPage = () => {
+  const router = useRouter();
+  const onGoogleLogin = () => {
+    router.push("http://localhost:3000/auth/google");
+  };
   return (
     <div className="flex w-full">
       <div className="m-auto font-bold flex flex-[7] text-center items-center justify-center text-4xl">
@@ -11,7 +16,9 @@ const LoginPage = () => {
         <div className="">
           <AccountCircleIcon className="text-blue w-20 h-20" />
         </div>
-        <Button className="text-xl font-bold">Login</Button>
+        <Button onClick={onGoogleLogin} className="text-xl font-bold">
+          Login
+        </Button>
       </div>
     </div>
   );
