@@ -4,8 +4,10 @@ import Button from "@/app/components/Button";
 import { useRouter } from "next/navigation";
 const LoginPage = () => {
   const router = useRouter();
+  const authUrl = process.env.NEXT_PUBLIC_AUTH_URL
   const onGoogleLogin = () => {
-    router.push(`${process.env.NEXTAUTH_URL}/auth/google`);
+    console.log(authUrl)
+    router.push(`${authUrl}/auth/google`);
   };
   return (
     <div className="flex w-full">
