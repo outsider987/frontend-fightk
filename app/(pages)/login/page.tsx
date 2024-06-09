@@ -7,6 +7,7 @@ const LoginPage = () => {
   const authUrl = process.env.NEXT_PUBLIC_AUTH_URL
   const onGoogleLogin = () => {
     console.log(authUrl)
+    console.log(authUrl)
     router.push(`${authUrl}/auth/google`);
   };
   return (
